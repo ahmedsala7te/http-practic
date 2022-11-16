@@ -2,6 +2,8 @@ package com.ahmedsala7te.practichttp.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.Objects;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 
  public class User {
@@ -43,4 +45,28 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
     public void setLast_name(String last_name) {
         this.last_name = last_name;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj==null){
+            return false;
+        }
+        if(!(obj instanceof User)){
+            return false;
+        }
+        return Objects.equals(((User) obj).id, this.id);
+
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                '}';
+    }
 }
+
+

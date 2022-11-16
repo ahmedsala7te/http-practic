@@ -13,7 +13,7 @@ public class UserParser {
         JsonNode dataNode = objectMapper.readTree(user);
         JsonNode userNode = dataNode.path("data");
         User parsedUser = objectMapper.treeToValue(userNode, User.class);
-        System.out.printf("[id=%d , email=%s , firstName = %s, lastName=%s]\n", parsedUser.getId(),parsedUser.getEmail(),parsedUser.getFirst_name(),parsedUser.getLast_name() );
+        //System.out.printf("[id=%d , email=%s , firstName = %s, lastName=%s]\n", parsedUser.getId(),parsedUser.getEmail(),parsedUser.getFirst_name(),parsedUser.getLast_name() );
 
         return parsedUser;
 //        ObjectMapper objectMapper = new ObjectMapper();

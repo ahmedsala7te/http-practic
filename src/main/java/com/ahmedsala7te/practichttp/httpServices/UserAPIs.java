@@ -35,10 +35,6 @@ public class UserAPIs {
             }
             in.close();
             return response.toString();
-//            UserParser parse = new UserParser();
-//            parse.parseUser(String.valueOf(response));
-
-
 
 
         } else {
